@@ -1,0 +1,23 @@
+#!/bin/sh
+# Run by github/github codespaces after starting
+
+# Always want to use ZSH as my default shell (e.g. for SSH)
+if ! grep -q "root.*/bin/zsh" /etc/passwd
+then
+  chsh -s /bin/zsh root
+fi
+
+# Install some developer tools and setup Linux how I like it
+apt-get install -y \
+  exa grc ripgrep shellcheck zsh-autosuggestions \
+  locate httpie 
+
+# Setup the database for locate
+updatedb
+
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt-get install -y nodejs
+npm install -g npm@latest
+
+echo "Don't forget to add a .env file to /workspaces for this codespace instance"
+

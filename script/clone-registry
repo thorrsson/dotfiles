@@ -1,0 +1,7 @@
+#!/bin/zsh
+cd /workspaces
+
+git clone https://github.com/github/registry.git
+git clone https://github.com/github/registry-metadata.git
+git clone https://github.com/github/container-registry.git
+git clone https://github.com/github/registry-integration-tests.git
