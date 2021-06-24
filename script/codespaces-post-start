@@ -22,7 +22,7 @@ npm install -g npm@latest
 ./install-starship.sh
 
 echo 'eval "$(starship init zsh)"' >> ~/.zshrc
-source .zshrc
+source ~/.zshrc
 
 echo "Don't forget to add a .env file to /workspaces for this codespace instance"
 
