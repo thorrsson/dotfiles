@@ -19,7 +19,9 @@ curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
 npm install -g npm@latest
 
-./script/install-starship.sh -y
+/workspaces/.codespaces/.persistedshare/dotfiles/script/install-starship.sh -y
+
+cp /workspaces/.codespaces/.persistedshare/dotfiles/.config/starship.toml ~/.config/
 
 if ! [[ $(grep 'starship' ~/.zshrc) ]]; then
   echo 'eval "$(starship init zsh)"' >> ~/.zshrc
