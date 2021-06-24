@@ -13,8 +13,7 @@ disabled = true
 [character]      # The name of the module we are configuring is "character"
 success_symbol = "  ➟"     # The "symbol" segment is being set to "➜"
 error_symbol = "  ✗"
-style_success = "bold #00A652"
-style_failure = "bold #df382c"
+
 
 # Hide the username. The username will only show in certain scenarios
 [username]
