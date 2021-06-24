@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 # Run by github/github codespaces after starting
 
 # Always want to use ZSH as my default shell (e.g. for SSH)
@@ -19,10 +19,12 @@ curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
 npm install -g npm@latest
 
-./install-starship.sh
+./script/install-starship.sh -y
 
-echo 'eval "$(starship init zsh)"' >> ~/.zshrc
-source ~/.zshrc
+if ! [[ $(grep 'starship' ~/.zshrc) ]]; then
+  echo 'eval "$(starship init zsh)"' >> ~/.zshrc
+fi
+zsh
 
 echo "Don't forget to add a .env file to /workspaces for this codespace instance"
 
